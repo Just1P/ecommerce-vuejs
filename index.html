@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <link
@@ -12,20 +12,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
     <div id="app">
+      <div class="card-container">
         <ul v-for="productItem in productList">
-            <cards
-                :id="productItem.id"
-                :img_src="productItem.img_src"
-                :price="productItem.price"
-                :like="productItem.like"
-                :number="productItem.number"
-            > </cards>
+          <cards
+            :id="productItem.id"
+            :img_src="productItem.img_src"
+            :price="productItem.price"
+            :like="productItem.like"
+            :number="productItem.number"
+          >
+          </cards>
         </ul>
+      </div>
     </div>
 
     <script type="module" src="script.js"></script>
-</body>
+  </body>
 </html>

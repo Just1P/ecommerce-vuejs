@@ -1,0 +1,41 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+img {
+  width: 500px;
+}
+
+.price {
+  font-size: 20px;
+  padding: 10px 10px;
+  background-color: orange;
+  color: white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  position: relative;
+}
+
+.like {
+  height: 50px;
+  width: 50%;
+  background-color: pink;
+  border: none;
+  color: white;
+}
+
+.cart {
+  height: 50px;
+  width: 50%;
+  background-color: paleturquoise;
+  border: none;
+  color: white;
+}
