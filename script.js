@@ -1,7 +1,7 @@
 const { createApp, ref } = Vue;
 import {cart} from "./components/cart.js";
-import {navigation} from "./components/cart.js";
-import {product} from "./components/cart.js";
+import {navigation} from "./components/navigation.js";
+import {product} from "./components/products.js";
 const vm = createApp({
     components: {
       "cards": product,
@@ -14,8 +14,6 @@ const vm = createApp({
       };
     },
     methods: {
-      
-      },
     },
     mounted() {
       fetch("products.json")

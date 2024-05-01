@@ -1,7 +1,7 @@
 export const product = {
     props: {
         id: Number,
-        imgSrc: String,
+        img_src: String,
         price: Number,
         like: Boolean,
         number: Number,
@@ -9,14 +9,14 @@ export const product = {
     },
     template: `
         <div class="card" :key="id">
-            <img :src="imgSrc" alt="" />
+            <img :src="img_src" alt="" >
             <div class="price"> {{ price }} €</div>
             <div class="card-footer">
-                <button v-on:click="like"> 
-                    <font-awesome-icon :icon="['far', 'heart']" />
+                <button> 
+                    <i class="fa-regular fa-heart"></i>
                 </button>
-                <button v-on:click="increase(number)">
-                    <font-awesome-icon :icon="['fas', 'cart-shopping']" />
+                <button>
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </button>
             </div>
         </div>
