@@ -1,10 +1,10 @@
 const { createApp, ref } = Vue;
-import {cart} from "./components/cart"
-import {navigation} from "./components/cart"
-import {product} from "./components/cart"
+import {cart} from "./components/cart.js";
+import {navigation} from "./components/cart.js";
+import {product} from "./components/cart.js";
 const vm = createApp({
     components: {
-      "card-post": cardItem,
+      "card": cardItem,
       "form-component": FormComponent,
     },
     data() {
