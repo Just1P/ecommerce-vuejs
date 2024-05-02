@@ -16,18 +16,24 @@
   </head>
   <body>
     <div id="app">
-      <div class="card-container">
-        <ul v-for="productItem in productList">
-          <cards
-            :id="productItem.id"
-            :img_src="productItem.img_src"
-            :price="productItem.price"
-            :like="productItem.like"
-            :number="productItem.number"
-          >
-          </cards>
-        </ul>
-      </div>
+      <header>
+        <nav></nav>
+      </header>
+      <section>
+        <div class="card-container col-10">
+          <ul v-for="productItem in productList">
+            <cards
+              :id="productItem.id"
+              :img_src="productItem.img_src"
+              :price="productItem.price"
+              :like="productItem.like"
+              :number="productItem.number"
+            >
+            </cards>
+          </ul>
+        </div>
+        <div class="cart col-2"></div>
+      </section>
     </div>
 
     <script type="module" src="script.js"></script>
