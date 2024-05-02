@@ -11,10 +11,10 @@ export const product = {
             <img :src="img_src" alt="" >
             <div class="price"> {{ price }} €</div>
             <div class="card-footer">
-                <button class="like"> 
+                <button class="btn btn-primary"> 
                     <i class="fa-regular fa-heart"></i>
                 </button>
-                <button class="cart">
+                <button class="btn btn-secondary">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </button>
             </div>
