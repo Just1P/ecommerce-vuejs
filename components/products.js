@@ -3,7 +3,6 @@ export const product = {
     id: Number,
     img_src: String,
     price: Number,
-    like: Boolean,
   },
   template: `
         <div class="card" :key="id">
