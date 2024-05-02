@@ -5,7 +5,7 @@ import { product } from "./components/products.js";
 const vm = createApp({
   components: {
     cards: product,
-    "nav-bar": navigation,
+    navBar: navigation,
     shop: cart,
   },
   data() {
