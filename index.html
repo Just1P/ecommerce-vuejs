@@ -17,17 +17,22 @@
   <body>
     <div id="app">
       <header>
-        <nav></nav>
+        <nav>
+          <navBar> </navBar>
+        </nav>
       </header>
       <section>
         <div class="row">
-          <div class="card-container col-8">
+          <div class="col-1"></div>
+          <div class="card-container col-7">
             <div class="row">
               <div class="col-6" v-for="productItem in productList">
                 <cards
                   :id="productItem.id"
                   :img_src="productItem.img_src"
                   :price="productItem.price"
+                  :like="productItem.like"
+                  @btn-liked="btnLiked"
                 >
                 </cards>
               </div>

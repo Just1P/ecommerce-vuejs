@@ -53,6 +53,9 @@ $secondary-color: rgb(175, 238, 238);
   font-size: 15px;
   cursor: pointer;
 
+  .liked {
+  }
+
   &-primary {
     background-color: $primary-color;
 
@@ -66,5 +69,22 @@ $secondary-color: rgb(175, 238, 238);
     &:hover {
       background-color: darken($secondary-color, 10%);
     }
+  }
+}
+
+header {
+  padding-bottom: 10px;
+
+  nav {
+    height: 50px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  .nav-icon {
+    font-size: 20px;
+    color: dimgray;
   }
 }

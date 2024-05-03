@@ -5,15 +5,20 @@ import { product } from "./components/products.js";
 const vm = createApp({
   components: {
     cards: product,
-    navBar: navigation,
+    navbar: navigation,
     shop: cart,
   },
   data() {
     return {
       productList: [],
+      isActive: false,
     };
   },
-  methods: {},
+  methods: {
+    btnLiked(id) {
+      this.productList[id].like = !this.productList[id].like;
+    },
+  },
   mounted() {
     fetch("products.json")
       .then((response) => response.json())

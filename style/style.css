@@ -101,4 +101,20 @@
 }
 .btn-secondary:hover {
   background-color: #85e5e5;
+}
+
+header {
+  padding-bottom: 10px;
+}
+header nav {
+  height: 50px;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+header .nav-icon {
+  font-size: 20px;
+  color: dimgray;
 }/*# sourceMappingURL=style.css.map */
