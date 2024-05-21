@@ -18,7 +18,16 @@
     <div id="app">
       <header>
         <nav>
-          <navBar> </navBar>
+          <div class="nav-heart">
+            <i class="fa-solid fa-heart nav-icon">
+              <div class="red-dot" v-if="AnyProductLiked"></div>
+            </i>
+          </div>
+          <div class="nav-cart cart-dot">
+            <i class="fa-solid fa-cart-shopping nav-icon">
+              <div class="red-dot" v-if="cartList.length"></div>
+            </i>
+          </div>
         </nav>
       </header>
       <section>
@@ -26,20 +35,41 @@
           <div class="col-1"></div>
           <div class="card-container col-7">
             <div class="row">
-              <div class="col-6" v-for="productItem in productList">
+              <div
+                class="col-6"
+                v-for="product in productList"
+                :key="product.id"
+              >
                 <cards
-                  :id="productItem.id"
-                  :img_src="productItem.img_src"
-                  :price="productItem.price"
-                  :like="productItem.like"
-                  @btn-liked="btnLiked"
-                >
-                </cards>
+                  :id="product.id"
+                  :img_src="product.img_src"
+                  :price="product.price"
+                  :like="product.like"
+                  @btn-liked="handleLike"
+                  @add-to-cart="addToCart(product)"
+                ></cards>
               </div>
             </div>
           </div>
 
-          <div class="cart col-4"></div>
+          <div class="cart col-3">
+            <div class="cart-header">
+              <h1>Panier</h1>
+            </div>
+            <div v-for="cartItem in cartList" :key="cartItem.id">
+              <cart
+                :id="cartItem.id"
+                :img_src="cartItem.img_src"
+                :price="cartItem.price"
+                :name="cartItem.name"
+                @remove-on-cart="removeFromCart(cartItem.id)"
+              ></cart>
+            </div>
+            <div class="footer">
+              <div class="total-price">{{ totalPrice }} €</div>
+              <button class="order">Commander</button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
